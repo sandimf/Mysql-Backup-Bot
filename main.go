@@ -27,8 +27,8 @@ var (
 	mysqlHost = getenv("MYSQL_HOST", "127.0.0.1")
 	mysqlPort = getenv("MYSQL_PORT", "3306")
 	mysqlUser = getenv("MYSQL_USER", "root")
-	mysqlPass = os.Getenv("MYSQL_PASS", "datakgs25") // kosong = tanpa password
-	mysqlDB   = os.Getenv("MYSQL_DB", "klinik_apps")    // wajib
+	mysqlPass = getenv("MYSQL_PASS", "") // kosong = tanpa password
+	mysqlDB   = getenv("MYSQL_DB", "")    // wajib
 
 	backupDir      = getenv("BACKUP_DIR", "/var/backups/mysql")
 	retentionDays  = getenv("RETENTION_DAYS", "7")
